@@ -1,9 +1,14 @@
-import MyMap from './components/MyMap'
-
+import MyMap from './components/MyMap';
+import MapSelector from './components/MapSelector';
+import { StoreProvider } from './store';
 function App() {
-  return (
-    <MyMap />
-  );
+	return (
+		<StoreProvider>
+			<MapSelector />
+			<MyMap />
+
+		</StoreProvider>
+	);
 }
 
 export default App;
